@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动跳转网页</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #00bfff, #008000);
+            font-family: Arial, sans-serif;
+        }
+        
+        .content {
+            text-align: center;
+            color: white;
+            animation: fadeInOut 3s infinite;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>欢迎来到Mr.Yz资源网站的跳转页面！</h1>
+        <p>页面将在3秒后自动跳转...</p>
+    </div>
+    <script>
+        const targetURL = 'http://39.104.26.184:53430'; // 替换为你的目标URL
+        const delay = 3000; // 延迟3秒
+        
+        setTimeout(() => {
+            window.location.href = targetURL;
+        }, delay);
+    </script>
+</body>
+</html>
